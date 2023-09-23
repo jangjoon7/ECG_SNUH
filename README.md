@@ -8,5 +8,9 @@
 3. data_train_age에는 ECG_adult_age_train.csv 파일과 ECG_child_age_train.csv 파일이 들어갑니다.**
 4. 마지막에 나오는 predicted_adult.csv와 predicted_child.csv에 나오는 값을 age prediction 값으로 사용해주시면 됩니다.
 
+* training 시 사용되는 training set에서 일부분 떼어낸 validation 개수는 현재 2000개이므로, training set의 개수가 2000보다 작으면 valnum 변수를 바꾸어 훈련이 가능하도록 하여야 합니다.
+
+* 재현에 질문 사항이 있으시면 jangjoon7@naver.com으로 연락 바랍니다.
+
 감사합니다.
 SPINoza 일동

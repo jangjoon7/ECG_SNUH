@@ -20,7 +20,8 @@ dataChildValidFolder = './data_valid_child_npy/'
 # folder_path.mkdir(parents=True, exist_ok=True)
 
 ageFolder = './data_train_age/'
-ageFileName = 'ECG_adult_age_train.csv'
+ageFileNameAdult = 'ECG_adult_age_train.csv'
+ageFileNameChild = 'ECG_child_age_train.csv'
 dataConcat = './data/'
 
 ####################################################################################
@@ -38,7 +39,7 @@ for i in range(max_number):
         X_data[idx_tmp, :] = np.load(dataAdultTrainFolder + 'ecg_adult_' + str(i) + '.npy')
         idx_tmp += 1
 
-Y_data = np.array(pandas.read_csv(ageFolder + ageFileName)['AGE'])
+Y_data = np.array(pandas.read_csv(ageFolder + ageFileNameAdult)['AGE'])
 
 np.savez_compressed(dataConcat + 'Adult_train', X_data=X_data, Y_data=Y_data)
 
@@ -70,7 +71,7 @@ for i in range(max_number):
         X_data[idx_tmp, :] = np.load(dataChildTrainFolder + 'ecg_child_' + str(i) + '.npy')
         idx_tmp += 1
 
-Y_data = np.array(pandas.read_csv(ageFolder + ageFileName)['AGE'])
+Y_data = np.array(pandas.read_csv(ageFolder + ageFileNameChild)['AGE'])
 
 np.savez_compressed(dataConcat + 'Child_train', X_data=X_data, Y_data=Y_data)
 
